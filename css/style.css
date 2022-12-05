@@ -8,7 +8,7 @@ a {
 }
 body {
   margin: 0;
-  padding: 0;
+  padding: 2px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
   background-image: linear-gradient(rgb(153, 153, 153), rgb(248, 248, 248));
@@ -17,7 +17,8 @@ header{
   border: 2px solid black;
 }
 header h1 {
-  display: inline-block;
+  width:60%;
+  display:inline-block;
   font-size: 48px;
 }
 header nav {
@@ -41,23 +42,102 @@ header nav ul li {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+  margin: 5px;
 }
 
 p {
   margin: 0;
 }
-main{
+#grid{
   display:grid;
+  margin: 2% 2%;
+  justify-content: space-around;
+  cursor: pointer;
   grid-template-columns: 1fr 2fr 2fr;
-  grid-template-rows: 300px 300px 300px;
+  grid-template-rows: 400px 200px 200px;
   grid-template-areas: 
-  "about photo-1 photo-1"
-  "work photo-2 photo-3"
-  "contact photo-4 photo-4";
+  "about cars cars"
+  "work remap hifi"
+  "contact comp laptop";
+}
+#cars{
+  grid-area:cars;
+  background-image: url(../images/cars.jpg);
+}
+#remap{
+  grid-area: remap;
+  background-image: url(../images/remapping.jpg);
+}
+#hifi{
+  grid-area: hifi;
+  background-image: url(../images/hifi.jpg);
+}
+#comp{
+  grid-area: comp;
+  background-image: url(../images/desktop-computers.jpg);
+}
+#laptop{
+  grid-area: laptop;
+  background-image: url(../images/laptop.jpg);
+}
+#contact{
+  grid-area: contact;
+  background-image: url(../images/contact.jpg);
+}
+#work{
+  grid-area: work;
+  background-image: url(../images/work.jpg);
+}
+#about{
+  grid-area: about;
+  background-image: url(../images/me.jpg);
+}
+/* following line is to set the properties for all the grid cells */
+.cell{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 3px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+  border-radius: 8px;
+  transition: all 1s ease-in-out;
+  box-shadow: inset 0px 0px 8px
+rgb(22, 21, 22), 0 0 15px
+rgb(27, 25, 27);
+}
+/* this line is for cells titles */
+.grid-text{
+  background-color: rgba(0,0,0,0.7);
+  padding: 30px;
+  height: 25px;
+  color: white;
+  font-size: 20px;
+  border-bottom: 5px solid #FF6200;
+  margin: 5px;
+}
+/* lines below are for hover bounce animation */
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+.cell:hover {
+  animation: bounce 0.5s;
 }
