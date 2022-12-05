@@ -141,3 +141,32 @@ rgb(27, 25, 27);
 .cell:hover {
   animation: bounce 0.5s;
 }
+
+@media only screen and (max-width: 70em) {
+  #grid {
+    grid-template-rows:300px 300px 300px 300px;
+    grid-template-columns:50% 50% ;
+    grid-template-areas:
+    "about cars"
+    "work remap"
+    "hifi comp"
+    "contact laptop";
+  }
+}
+
+@media only screen and (max-width: 50em) {
+
+  #grid {
+    grid-template-rows:300px 300px 300px 300px 300px 300px 300px 300px;
+    grid-template-columns:100% ;
+    grid-template-areas:
+    "about"
+    "cars"
+    "work"
+    "remap"
+    "hifi"
+    "comp"
+    "laptop"
+    "contact";
+  }
+}
