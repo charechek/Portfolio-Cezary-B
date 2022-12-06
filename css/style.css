@@ -1,9 +1,13 @@
+/* line below is for variables */
+:root{
+  --display-type: inline-block;
+  /* lines below are to set visual standards for the website */
+}
 * {
   box-sizing: border-box;
-
 }
 a {
-  color:black;
+  color:var(--color);
   text-decoration: none;
 }
 body {
@@ -14,11 +18,11 @@ body {
   background-image: linear-gradient(rgb(153, 153, 153), rgb(248, 248, 248));
 }
 header{
-  border: 2px solid black;
+  border: 2px solid var(--color);
 }
 header h1 {
   width:60%;
-  display:inline-block;
+  display:var(--display-type);
   font-size: 48px;
 }
 header nav {
@@ -32,15 +36,13 @@ header nav ul {
     list-style-type: none;
 }
 header nav ul li {
-    display: inline-block;
+    display: var(--display-type);
     margin-left: 25px;
 }
-
 #hero-banner{
-  display: inline-block;
-  border:2px black solid;
+  display: var(--display-type);
+  border:2px var(--color);
 }
-
 h1,
 h3,
 h4,
@@ -48,7 +50,6 @@ h5,
 h6 {
   margin: 5px;
 }
-
 p {
   margin: 0;
 }
@@ -64,6 +65,7 @@ p {
   "work remap hifi"
   "contact comp laptop";
 }
+/* Lines below are for image links */
 #cars{
   grid-area:cars;
   background-image: url(../images/cars.jpg);
@@ -127,12 +129,10 @@ rgb(27, 25, 27);
 		-webkit-transform: translateY(0);
 		transform: translateY(0);
 	}
-
 	40% {
 		-webkit-transform: translateY(-20px);
 		transform: translateY(-20px);
 	}
-
 	80% {
 		-webkit-transform: translateY(-10px);
 		transform: translateY(-10px);
@@ -141,7 +141,7 @@ rgb(27, 25, 27);
 .cell:hover {
   animation: bounce 0.5s;
 }
-
+/* Below lines are for different display types */
 @media only screen and (max-width: 70em) {
   #grid {
     grid-template-rows:300px 300px 300px 300px;
@@ -153,7 +153,6 @@ rgb(27, 25, 27);
     "contact laptop";
   }
 }
-
 @media only screen and (max-width: 50em) {
 
   #grid {
