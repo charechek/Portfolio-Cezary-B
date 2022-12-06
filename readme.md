@@ -23,7 +23,7 @@ Link to repository of website:
 ## Usage
 
 Use in web browser. Browse information for each section. Use the top links to move to each website's section.  
-The website is designated for desktop view, tablet and mobile phone wiev.
+The website is designated for desktop view, tablet and mobile phone view.
 <img src="images\screenshot.PNG" width="50%" height="50%">
 <hr>
 ## Credits
